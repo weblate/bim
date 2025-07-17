@@ -28,6 +28,8 @@
 #include <bim/game/component/player_action.hpp>
 #include <bim/game/component/player_action_queue.hpp>
 #include <bim/game/component/position_on_grid.hpp>
+#include <bim/game/component/shield_power_up.hpp>
+#include <bim/game/component/shield_power_up_spawner.hpp>
 #include <bim/game/component/timer.hpp>
 #include <bim/game/constant/max_player_count.hpp>
 #include <bim/game/contest.hpp>
@@ -308,6 +310,8 @@ void bim::net::contest_runner::archive_io(Snapshot&& snapshot,
       .template get<bim::game::invisibility_power_up>(archive)
       .template get<bim::game::invisibility_power_up_spawner>(archive)
       .template get<bim::game::invisibility_state>(archive)
+      .template get<bim::game::shield_power_up>(archive)
+      .template get<bim::game::shield_power_up_spawner>(archive)
       .template get<bim::game::kicked>(archive)
       .template get<bim::game::player>(archive)
       .template get<bim::game::player_action>(archive)
